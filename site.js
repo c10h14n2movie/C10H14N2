@@ -25,13 +25,13 @@ $.extend($.easing,
         }, options );
         navItems = this;
 
-        //attatch click listeners
+
     	navItems.on('click', function(event){
     		event.preventDefault();
             var navID = $(this).attr("href").substring(1);
             disableScrollFn = true;
             activateNav(navID);
-            populateDestinations(); //recalculate these!
+            populateDestinations();
         	$('html,body').animate({scrollTop: sections[navID] - settings.scrollToOffset},
                 settings.scrollSpeed, "easeInOutExpo", function(){
                     disableScrollFn = false;
@@ -39,10 +39,10 @@ $.extend($.easing,
             );
     	});
 
-        //populate lookup of clicable elements and destination sections
-        populateDestinations(); //should also be run on browser resize, btw
+   
+        populateDestinations();
 
-        // setup scroll listener
+
         $(document).scroll(function(){
             if (disableScrollFn) { return; }
             var page_height = $(window).height();
@@ -74,12 +74,11 @@ $(document).ready(function (){
 
     $('nav li a').navScroller();
 
-    //section divider icon click gently scrolls to reveal the section
+
 	$(".sectiondivider").on('click', function(event) {
     	$('html,body').animate({scrollTop: $(event.target.parentNode).offset().top - 50}, 400, "linear");
 	});
 
-    //links going to other sections nicely scroll
 	$(".container a").each(function(){
         if ($(this).attr("href").charAt(0) == '#'){
             $(this).on('click', function(event) {
