@@ -303,7 +303,10 @@ nav ul li:hover, nav ul li.active {
   }
 }
 
-
+.video {
+    width: 100%;
+    height: 500px;
+}
 
 /* mid size (tablets, landscapes) */
 @media only screen and (max-width: 679px) {
@@ -354,4 +357,11 @@ nav ul li:hover, nav ul li.active {
     -moz-column-count:    2;
     column-count:         2;
   }
+    
+    
+.video {
+    width: 100%;
+    height: 250px;
+}
+    
 }
