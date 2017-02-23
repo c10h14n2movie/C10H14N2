@@ -11,7 +11,6 @@ permalink: /:title ## disables post output
 timezone: null
 lsi: false
 markdown: kramdown
-baseurl: /SinglePaged
 
 ### content configuration ###
 ### content configuration ###
@@ -22,6 +21,20 @@ favicon:     "img/favicon.ico"
 touch_icon:  "img/apple-touch-icon.png"
 google_analytics_key: UA-56627822-1 ## put YOUR key here to enable tracking! (blank to disable)
 
+
+#optimization
+#compress.html
+compress_html:
+  clippings: [html,div, p, ul, td, h1, h2, h3, h4,link, meta, footer, nav, img, header, hr, br, head, style, li, ul, ol, time, main, script, title]
+  comments: ["<!-- ", " -->"]
+  endings: [all]
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+  startings: []
+  
+  
 
 ### template colors, used site-wide via css ###
 colors:
