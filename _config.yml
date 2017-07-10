@@ -17,8 +17,8 @@ markdown: kramdown
 title:       "C10H14N2 - A Pawan Kumar movie"
 keywords:    "c10h14n2, c10h14n2movie, c10h14n2thefilm,  kannada, lucia, pawan kumar, kannada movie"
 description: "c10h14n2: a new Kannada movie from Pawan Kumar who has directed lucia and U-Turn, is coming up. Get all the upadtes here."
-favicon:     "favicon.ico"
-touch_icon:  "img/apple-icon-precomposed.png"
+favicon:     "/favicon.ico"
+touch_icon:  "/img/apple-icon-precomposed.png"
 google_analytics_key: UA-56627822-1 ## put YOUR key here to enable tracking! (blank to disable)
 
 
@@ -34,7 +34,8 @@ compress_html:
   profile: false
   startings: []
   
-  
+sass:
+ style: compressed
 
 ### template colors, used site-wide via css ###
 colors:
